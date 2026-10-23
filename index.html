@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quebrada em Cena - Plataforma de Cultura Periférica</title>
+  <meta name="description" content="Quebrada em Cena — plataforma de cultura periférica feita por jovens." />
+  <meta property="og:title" content="Quebrada em Cena - Plataforma de Cultura Periférica" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo" id="logo">QUEBRADA EM CENA</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+    <nav id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#programacao">Programação</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#turma">A Turma</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="tag" id="heroTag"></span>
+      <h1 id="heroTitulo"></h1>
+      <p id="heroSub"></p>
+      <a class="btn" id="heroBtn"></a>
+    </div>
+  </section>
+
+  <section id="sobre" class="secao">
+    <h2 id="sobreTitulo"></h2>
+    <div id="sobreTexto" class="texto"></div>
+    <div id="destaques" class="destaques"></div>
+  </section>
+
+  <section id="programacao" class="secao escura">
+    <h2 id="progTitulo"></h2>
+    <div id="progLista" class="lista"></div>
+  </section>
+
+  <section id="eventos" class="secao">
+    <h2 id="eventosTitulo"></h2>
+    <div id="eventosGrid" class="grid"></div>
+  </section>
+
+  <section id="turma" class="secao escura">
+    <h2 id="turmaTitulo"></h2>
+    <p id="turmaTexto" class="texto"></p>
+    <div id="turmaGrid" class="grid turma"></div>
+  </section>
+
+  <section id="contato" class="secao">
+    <h2 id="contatoTitulo"></h2>
+    <p id="contatoTexto" class="texto"></p>
+    <div id="contatoLinks" class="contato-links"></div>
+  </section>
+
+  <footer>
+    <p id="rodape"></p>
+  </footer>
+
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

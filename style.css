@@ -1,0 +1,101 @@
+/* ===== Cores e fontes (mude aqui para trocar a identidade) ===== */
+:root {
+  --fundo: #0d0d0d;
+  --fundo-2: #161616;
+  --card: #1f1f1f;
+  --texto: #f2f2f2;
+  --texto-2: #b5b5b5;
+  --amarelo: #ffd200;
+  --vermelho: #e63946;
+  --titulo: "Bebas Neue", sans-serif;
+  --corpo: "Poppins", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--fundo); color: var(--texto); font-family: var(--corpo); line-height: 1.6; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ===== Menu ===== */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; background: rgba(13,13,13,.92); backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--amarelo);
+}
+.logo { font-family: var(--titulo); font-size: 1.8rem; color: var(--amarelo); text-decoration: none; letter-spacing: 1px; }
+.nav nav { display: flex; gap: 22px; }
+.nav nav a { text-decoration: none; font-weight: 500; font-size: .95rem; }
+.nav nav a:hover { color: var(--amarelo); }
+.menu-btn { display: none; background: none; border: 0; color: var(--texto); font-size: 1.6rem; cursor: pointer; }
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 88vh; display: flex; align-items: center; padding: 60px 24px;
+  background: linear-gradient(135deg, rgba(230,57,70,.35), rgba(13,13,13,.95)), var(--fundo-2);
+  background-size: cover; background-position: center;
+}
+.hero-content { max-width: 900px; margin: 0 auto; width: 100%; }
+.tag { display: inline-block; background: var(--vermelho); color: #fff; padding: 4px 12px; font-weight: 600; font-size: .85rem; margin-bottom: 16px; }
+.hero h1 { font-family: var(--titulo); font-size: clamp(3.2rem, 11vw, 7.5rem); line-height: .95; color: var(--amarelo); }
+.hero p { font-size: 1.15rem; color: var(--texto-2); max-width: 620px; margin: 18px 0 28px; }
+.btn {
+  display: inline-block; background: var(--amarelo); color: #000; text-decoration: none;
+  padding: 12px 26px; font-weight: 700; border: 2px solid var(--amarelo); transition: .2s;
+}
+.btn:hover { background: transparent; color: var(--amarelo); }
+
+/* ===== Seções ===== */
+.secao { padding: 80px 24px; max-width: 1100px; margin: 0 auto; }
+.secao.escura { max-width: none; background: var(--fundo-2); }
+.secao.escura > * { max-width: 1100px; margin-left: auto; margin-right: auto; }
+.secao h2 {
+  font-family: var(--titulo); font-size: clamp(2.6rem, 6vw, 4rem); color: var(--amarelo);
+  margin-bottom: 24px; display: inline-block; border-bottom: 4px solid var(--vermelho);
+}
+.secao.escura h2 { display: block; width: fit-content; }
+.texto p, p.texto { color: var(--texto-2); font-size: 1.05rem; margin-bottom: 14px; max-width: 760px; }
+
+.destaques { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 30px; }
+.destaque { background: var(--card); padding: 22px; border-left: 4px solid var(--amarelo); }
+.destaque strong { font-family: var(--titulo); font-size: 2.4rem; color: var(--amarelo); display: block; }
+
+/* Programação */
+.lista { display: flex; flex-direction: column; gap: 14px; }
+.item-prog { display: grid; grid-template-columns: 140px 1fr; gap: 18px; background: var(--card); padding: 20px; border-left: 4px solid var(--vermelho); }
+.item-prog .data { font-family: var(--titulo); font-size: 1.6rem; color: var(--amarelo); }
+.item-prog h3 { font-size: 1.1rem; }
+.item-prog p { color: var(--texto-2); font-size: .95rem; }
+.item-prog small { color: var(--vermelho); font-weight: 600; }
+
+/* Eventos / Turma */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { background: var(--card); overflow: hidden; transition: transform .2s; }
+.card:hover { transform: translateY(-4px); }
+.card .foto { aspect-ratio: 4/3; background: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666; font-size: .9rem; }
+.card .foto img { width: 100%; height: 100%; object-fit: cover; }
+.card .info { padding: 18px; }
+.card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.card p { color: var(--texto-2); font-size: .95rem; }
+.turma { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-top: 20px; }
+.turma .foto { aspect-ratio: 1/1; }
+.turma .info { text-align: center; }
+
+/* Contato */
+.contato-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
+
+footer { text-align: center; padding: 30px 20px; border-top: 2px solid var(--amarelo); color: var(--texto-2); font-size: .9rem; }
+
+/* ===== Celular ===== */
+@media (max-width: 760px) {
+  .menu-btn { display: block; }
+  .nav nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--fundo); border-bottom: 2px solid var(--amarelo);
+  }
+  .nav nav.aberto { display: flex; }
+  .nav nav a { padding: 14px 24px; border-top: 1px solid #222; }
+  .item-prog { grid-template-columns: 1fr; gap: 6px; }
+  .secao { padding: 60px 16px; }
+}
